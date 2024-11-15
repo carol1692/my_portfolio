@@ -1,0 +1,42 @@
+{% load bootstrap5 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    {% block css_files %}
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Borel&family=Grandiflora+One&family=Montserrat&family=Shrikhand&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'portfolio/css/style1.css' %}">
+
+    {% endblock %}
+    <title>Ana Lemos</title>
+</head>
+<body background="{% static 'portfolio\img\img_autoral_ana_lemos_progressive.jpg'%}">
+    <div class="container-fluid">
+       
+        <div class="container-sm">
+            
+            {% include "portfolio\includes\nav_buttons.html" %}
+            
+            {% block content%} {% endblock %}
+
+            <hr>
+            
+             <footer class="borel-regular body-font" id="footer" >2024, Ana Lemos - Autoral Content </footer>
+           
+            <!-- <footer class="borel-regular body-font" id="footer" >2024, Ana Lemos - Conteúdo autoral</footer> -->
+           
+        <div>
+    </div> 
+</body>
+</html>
