@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+{% block header %}
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 header">
+        <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Posts</h1>
+        </div>
+    </div>
+{% endblock %}
+{% block content%}
+
+<div class=" align-items-md-stretch">
+    {% for key, content_dict in posts.items %}
+        <div class="col-md">
+            <div class="p-5 text-bg-dark rounded-3 border">
+                <h2>{{content_dict.title}}</h2>
+                <p>{{content_dict.subtitle}}</p>
+                <a href="{% url 'post' id=key %}" class="btn btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Read more...</a>
+            </div>
+        </div>
+    {% endfor%}
+</div>
+{% endblock %}
