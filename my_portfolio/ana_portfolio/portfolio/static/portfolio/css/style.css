@@ -73,6 +73,11 @@ hr{
     max-height: 40vh;;
 }
 
+.progress-container{
+    width: 40vw;
+    
+}
+
 li{
     margin-left: 15px;
 }
@@ -102,3 +107,9 @@ li{
 .center{
     padding-left: 25%;
 }
+
+.img-thumbs{
+    width: 170rem;
+    height: 100rem;
+}
+

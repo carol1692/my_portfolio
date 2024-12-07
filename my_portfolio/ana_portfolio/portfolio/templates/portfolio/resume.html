@@ -1,6 +1,53 @@
 {% extends "portfolio/base_portfolio.html" %}
 
 {% block content %}
-<h1>Resume</h1>
+<div class="row mx-auto">
+    <div class="py-4 d-flex justify-content-center">
+        <h2 class="montserrat-font body-font">Download:</h2>
+        <!-- <a class="button_download montserrat-font mx-3" id='download_pt' href="{% url 'download_cv' cv='download_pt' %}" target="_blank">Portuguese - BR</a> -->
+        <a class="button_download montserrat-font mx-3" id='download_en' href="{% url 'download_cv' cv='download_en' %}" target="_blank">English</a>
+    </div>
+    <hr>
+    <div class="align-middle content body-font cv-body mt-1" id="english_content" style="display: block;">
+        <h1 class="montserrat-font body-font pb-3 "> Ana Carolina Lemos </h1>
+        <hr>
+        <h2> Full-Stack Developer </h2>
+        <h3> EY - Ernst & Young</h3>
+        <h4> Period: 2024 - 2023  </h4>
+        <h5> Development of web applications, using framework Flask, Python and Javascript as main program languages </h5>
+        <hr>
+        <h2> QA Tester </h2>
+        <h3> IBM - Internal Project</h3>
+        <h4> Período: 2022 - 2023  </h4>
+        <h5> Payload tests using SoapUI </h5>
+        <hr>
+        <h2> Application Developer </h2>
+        <h3> IBM - AT&T Project</h3>
+        <h4> Período: 2021 - 2022  </h4>
+        <h5> Monitoring of execution tests in test environment in Universal Biller AT&T Project.</h5>
+        <h5> Development of automations using python helping team to create a status service. </h5>
+        <hr>
+        <h2> Infrastructure Specialist - Security Support </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: 2019 - 2021  </h4>
+        <h5> Resolução de vulnerabilidades de segurança de O.S em servidores Linux e Windows</h5>
+        <hr>
+        <h2> Infrastructure Specialist - Support of Devops middlewares </h2>
+        <h3> IBM - DevSecOps Project </h3>
+        <h4> Período: Jan/2017 - Mar/2018  </h4>
+        <h5> Support of Rational solution for Collaborative Lifecycle Management (CLM) e UrbanCode Deploy,</h5>
+        <h5> troubleshooting, agents configuration, users management </h5>
+        <hr>
+        <h2> Infrastructure Specialist - Queue Manager </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Jan/2017 - Dez/2018  </h4>
+        <h5> Responsible to analyse requests, attend and support brazilians and international clients, distribute requests among team members aiming for a healthy work balance to them, training new team members to work as dispatchers and support middlewares. </h5>
+        <hr>
+        <h2> Intern - Queue Dispatcher </h2>
+        <h3> IBM - DevSecOps Project</h3>
+        <h4> Período: Set/2016 - Dez/2016  </h4>
+        <h5> Responsible to analyse requests, attend and support brazilians and international clients, distribute requests among team members aiming for a healthy work balance to them. </h5>
+    </div>
+</div>
 {% endblock %}
 

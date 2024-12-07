@@ -6,5 +6,6 @@ urlpatterns = [
     path("skills", views.skills, name="skills_portfolio"),
     path("resume", views.resume, name="resume_portfolio"),
     path("projects", views.projects, name="projects_portfolio"),
+    path("download:<str:cv>", views.download, name="download_cv"),
 ]
 
