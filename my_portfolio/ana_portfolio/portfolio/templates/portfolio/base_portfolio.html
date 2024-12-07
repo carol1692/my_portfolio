@@ -17,11 +17,11 @@
     
         <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'portfolio/css/style1.css' %}">
-
     {% endblock %}
+    <script src="{% static 'js/navBar.js' %}"></script>
     <title>Ana Lemos</title>
 </head>
-<body background="{% static 'portfolio\img\img_autoral_ana_lemos_progressive.jpg'%}">
+<body background="{% static 'portfolio\img\img_autoral_ana_lemos_progressive.jpg'%}" >
     <div class="container-fluid">
        
         <div class="container-sm">
@@ -32,11 +32,12 @@
 
             <hr>
             
-             <footer class="borel-regular body-font" id="footer" >2024, Ana Lemos - Autoral Content </footer>
+             <footer class="borel-regular body-font" id="footer" >{{ year }}, Ana Lemos - Autoral Content </footer>
            
             <!-- <footer class="borel-regular body-font" id="footer" >2024, Ana Lemos - Conteúdo autoral</footer> -->
            
         <div>
     </div> 
+    
 </body>
 </html>
