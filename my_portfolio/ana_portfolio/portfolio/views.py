@@ -10,7 +10,7 @@ def current_year():
     return year
 
 def index(request, data=current_year()):
-    return render(request, 'portfolio/index.html', {"id": "home_bt", "year":data})
+    return HttpResponse(render(request, 'portfolio/index.html', {"id": "home_bt", "year":data}))
 
 def skills(request, data=current_year()):
     return render(request, 'portfolio/skills.html' , {"year":data})
