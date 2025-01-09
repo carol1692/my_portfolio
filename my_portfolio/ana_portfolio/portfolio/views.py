@@ -10,16 +10,16 @@ def current_year():
     return year
 
 def index(request, data=current_year()):
-    return HttpResponse(render(request, 'portfolio/index.html', {"id": "home_bt", "year":data}))
+    return render(request, 'portfolio/index.html', {"id": "home_bt", "year":data})
 
 def skills(request, data=current_year()):
-    return HttpResponse(render(request, 'portfolio/skills.html' , {"year":data}))
+    return render(request, 'portfolio/skills.html' , {"year":data})
 
 def resume(request, data=current_year()):
-    return HttpResponse(render(request, 'portfolio/resume.html' , {"year":data}))
+    return render(request, 'portfolio/resume.html' , {"year":data})
 
 def projects(request, data=current_year()):
-    return HttpResponse(render(request, 'portfolio/projects.html' , {"year":data}))
+    return render(request, 'portfolio/projects.html' , {"year":data})
 
 def download(request, cv):
     path_cv = 'portfolio/static/portfolio/cvs/'
