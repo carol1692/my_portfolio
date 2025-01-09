@@ -8,10 +8,10 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
-import ana_portfolio
+import ana_portfolio.ana_portfolio as fixthismess
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ana_portfolio.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fixthismess.settings')
 
 application = get_wsgi_application()
