@@ -58,6 +58,7 @@ hr{
 
 .active{
     color: var(--red-brown);
+    font-weight: bolder;
 }
 
 .body-font{

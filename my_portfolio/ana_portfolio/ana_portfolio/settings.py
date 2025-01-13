@@ -14,38 +14,38 @@ from pathlib import Path
 import os
 import sys
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-    },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'stream': sys.stdout,
-            'formatter': 'verbose'
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers':['console'],
-            'propagate': True,
-            'level':'DEBUG',
-        },
-        'MYAPP': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    }
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+#             'datefmt' : "%d/%b/%Y %H:%M:%S"
+#         },
+#         'simple': {
+#             'format': '%(levelname)s %(message)s'
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#             'stream': sys.stdout,
+#             'formatter': 'verbose'
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers':['console'],
+#             'propagate': True,
+#             'level':'DEBUG',
+#         },
+#         'MYAPP': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     }
+# }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -59,7 +59,7 @@ SECRET_KEY = "haoshdohasdl,ashdjhalfkakjfkh"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 

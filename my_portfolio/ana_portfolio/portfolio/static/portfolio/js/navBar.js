@@ -1,10 +1,5 @@
-function activeURL(element){
-    console.log(element)
-    // document.getElementById(element).classList.add("active","fw-bold")
-}
-
-
-function alertTeste(){
-    console.log("TESTE")
-    // document.getElementById(element).classList.add("active","fw-bold")
+function activeURL(page_bt){
+    let button = document.getElementById(page_bt);
+    button.style.color = "#6B240C";
+    button.style.fontWeight = "bolder"
 }
