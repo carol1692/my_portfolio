@@ -56,9 +56,9 @@ hr{
     transform: translateY(4px);
 }
 
-.active{
+.active {
     color: var(--red-brown);
-    font-weight: bolder;
+    font-weight:bolder;
 }
 
 .body-font{
