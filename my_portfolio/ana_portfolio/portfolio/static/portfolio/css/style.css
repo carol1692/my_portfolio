@@ -31,7 +31,7 @@ hr{
 
 .button:hover {
     color: var(--red-brown);
-  }
+}
 
 
 .button_download{
@@ -56,9 +56,16 @@ hr{
     transform: translateY(4px);
 }
 
-.active {
-    color: var(--red-brown);
-    font-weight:bolder;
+.svg-icon{
+    width: 80px;
+    height: 80px;
+    fill:var(--red-brown); /* Cor do ícone */
+}
+
+.svg-icon:hover{
+    width: 75px;
+    height: 75px;
+    fill:var(--hot-brown); /* Cor do ícone */
 }
 
 .body-font{
@@ -76,7 +83,6 @@ hr{
 
 .progress-container{
     width: 40vw;
-    
 }
 
 li{
@@ -92,6 +98,7 @@ li{
 .form-switch .form-check-input {
   color: var(--hot-brown);
 }
+
 .form-switch .form-check-input:focus {
     border-color: var(--red-brown);
     outline: 0;
@@ -114,3 +121,11 @@ li{
     height: 100rem;
 }
 
+.contact-form{
+    width: 50rem;
+    
+}
+
+.adjust-height{
+    height: 35vh;
+}

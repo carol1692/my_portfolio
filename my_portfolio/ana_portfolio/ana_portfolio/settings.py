@@ -55,7 +55,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY_DJANGO")
-# SECRET_KEY = "haoshdohasdl,ashdjhalfkakjfkh" 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -77,6 +76,7 @@ INSTALLED_APPS = [
     'ana_portfolio',
     'portfolio',
     'blog',
+    'morse_translator'
 ]
 
 MIDDLEWARE = [

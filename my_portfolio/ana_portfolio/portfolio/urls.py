@@ -7,5 +7,7 @@ urlpatterns = [
     path("resume", views.resume, name="resume_portfolio"),
     path("projects", views.projects, name="projects_portfolio"),
     path("download:<str:cv>", views.download, name="download_cv"),
+    path("contact", views.contact, name="contact"),
+    path("thanks_msg", views.thanks_msg, name="thanks_msg")
 ]
 

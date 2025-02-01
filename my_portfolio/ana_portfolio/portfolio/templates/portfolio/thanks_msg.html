@@ -1,0 +1,26 @@
+
+
+{% extends "portfolio/base_portfolio.html" %}
+
+{% block content %}
+
+<div class="row adjust-height">
+    <!-- <div class="col ">
+        {% load static %}
+        <img src="{% static 'portfolio\img\char_thinking.gif' %}" class="img-fluid gif-intro"  alt="">
+    </div> -->
+    <div class="col text-center montserrat-font body-font my-auto">
+        <h1>Thank you for your message! </h1>
+        <div class="py-4">
+            <a class="button_download" href="{% url 'contact' %}" id="contact_bt" > Back </a>
+        </div>
+    </div>
+    <!-- <div class="col ">
+        {% load static %}
+        <img src="{% static 'portfolio\img\char_thinking.gif' %}" class="img-fluid gif-intro"  alt="">
+    </div> -->
+
+</div>
+
+{% endblock %}
+
