@@ -1,12 +1,19 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, FileResponse
+from django.http import HttpResponseRedirect, HttpResponseServerError, FileResponse
 from datetime import datetime
 from .forms.contact_form import ContactPortfolio
 import smtplib, os
 from replace_accents import replace_accents_characters
+import logging
+from django.core.mail import EmailMultiAlternatives
+from django.utils.html import strip_tags
+from django.conf import settings
+from django.template.loader import render_to_string
 # Create your views here.
 
+from dotenv import load_dotenv
 
+load_dotenv()
 def current_year():
     date = datetime.today()
     year = date.year
@@ -35,21 +42,21 @@ def download(request, cv):
 def contact(request, data=current_year):
     if request.method == 'POST':
         formulario = ContactPortfolio(request.POST)
-        my_email = os.getenv("E_MAIL")
-        mail_pwd = os.getenv("E_MAIL_PASSWD")
         if formulario.is_valid():
             user_name = formulario.cleaned_data['user_name']
             user_email = formulario.cleaned_data['user_mail']
             user_message = formulario.cleaned_data['message']
+            html_content = render_to_string('portfolio/contact_mail.html', {"username": user_name, "mail": user_email, "message": user_message} )
+            text_content = strip_tags(html_content)
 
-            with smtplib.SMTP("smtp.gmail.com") as connection:
-                connection.starttls()
-                connection.login(user=my_email, password=mail_pwd)
-                connection.sendmail(from_addr=my_email, to_addrs="carol1692@hotmail.com", msg=f"subject: Contact from {user_name} via my portfolio\n\n Nome do remetente: {user_name}\n\n  Reply to e-mail: {user_email}\n\n Message:{replace_accents_characters(user_message)}")
+            send_email = EmailMultiAlternatives(subject=f'Contact from {user_name} via my portfolio', body=text_content, from_email=settings.EMAIL_HOST_USER, to=["carol1692@hotmail.com"])
+            send_email.attach_alternative(html_content, 'text/html')
+            send_email.send()
             return HttpResponseRedirect("/portfolio/thanks_msg")
     else:
         formulario = ContactPortfolio()
-    return render(request, "portfolio/contact.html", {"id": "contact_bt","year":data, "formulario":formulario})
     
+    return render(request, "portfolio/contact.html", {"id": "contact_bt","year":data, "formulario":formulario})
+
 def thanks_msg(request, data=current_year()):
     return render(request, 'portfolio/thanks_msg.html' , {"id": "contact_bt","year":data})

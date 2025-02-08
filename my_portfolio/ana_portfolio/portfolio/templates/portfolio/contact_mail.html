@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Grandiflora+One&family=Montserrat&family=Shrikhand&display=swap" rel="stylesheet">
+    <style>
+        .background{
+            font-family: "Montserrat", sans-serif;
+            background-color:#F8E0CFff;
+            border-radius: 10px;
+        }
+
+        .body-font{
+            color: #6B240C;
+        }
+
+        hr{
+            color: #994D1C;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"  >
+        <h1 class="body-font"> Hi Ana, a new contact for you. </h1>
+        <hr>
+        <p class="body-font"> The sender is called: {{ username }}</p>
+        <p class="body-font"> The e-mail to answer is: {{ mail }} </p>
+        <p class="body-font"> Message: {{ message }} </p>
+        <hr>
+        <div>
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXdyNm04bmZsc3hiMDB2dzN5cGJjeWVhdzZ4Y3gzN2RlcXU5eDR6NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/quXzix56QiSDPAHbGg/giphy.gif" class="img-fluid gif-intro"  alt="">
+        </div>
+    </div>
+</body>
+</html>
+    
