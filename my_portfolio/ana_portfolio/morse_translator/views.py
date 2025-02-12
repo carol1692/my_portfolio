@@ -56,11 +56,11 @@ def index_morse(request):
                 morse = [MORSE_CODE[letter] for letter in message_normalized[0] if MORSE_CODE[letter]]
                 converted_list = map(str, morse)
                 result = ''.join(converted_list)
-                return render(request,"morse_translator\index.html", {"morse_form":form, "message":message, "result": result})
+                return render(request, "morse_translator/index.html", {"morse_form":form, "message":message, "result": result})
             except KeyError:
                 error = ("Please insert a valid message... ")
-                return render(request,"morse_translator\index.html", {"morse_form":form, "message":message, "error": error})
+                return render(request,"morse_translator/index.html", {"morse_form":form, "message":message, "error": error})
     else:
         form = MorseForm()
-    return render(request,"morse_translator\index.html", {"morse_form":form})
+    return render(request,"morse_translator/index.html", {"morse_form":form})
    
