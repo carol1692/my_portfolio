@@ -77,8 +77,10 @@ hr{
 }
 
 .gif-intro{
-    max-width: 40vw;;
-    max-height: 40vh;;
+    max-width: 40vw;
+    max-height: 40vh;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .progress-container{
@@ -117,13 +119,26 @@ li{
 }
 
 .img-thumbs{
-    width: 170rem;
-    height: 100rem;
+    border-radius: 3vb;
 }
 
+.img-thumbnail-2{
+    border-color: var(--hot-brown);
+}
+
+.bkg-card{
+    background-color: var(--apricot);
+}
+
+a {
+    text-decoration: none;
+}
+
+.card{
+    border-color: var(--hot-brown);
+}
 .contact-form{
     width: 50rem;
-    
 }
 
 .adjust-height{

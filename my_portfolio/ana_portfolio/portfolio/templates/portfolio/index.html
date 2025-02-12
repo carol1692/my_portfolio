@@ -1,5 +1,5 @@
 {% extends "portfolio/base_portfolio.html" %}
-
+{% load static %}
 {% block content %}
 
         <div class="row">
@@ -10,8 +10,10 @@
             </div> 
         
             <div class="col content">
-                {% load static %}
-                <img src="{% static 'portfolio/img/char_sem_ruido.gif' %}" class="img-fluid gif-intro"  alt="">
+                <div class="align-center" >
+                    <img src="{% static 'portfolio/img/char_sem_ruido.gif' %}" class="img-fluid gif-intro" alt="">
+                </div>
+                
             </div>
         </div>
     
