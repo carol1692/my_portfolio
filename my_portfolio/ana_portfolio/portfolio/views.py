@@ -1,17 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponseServerError, FileResponse
+from dotenv import load_dotenv
+from django.utils.html import strip_tags
+from django.template.loader import render_to_string
+from django.http import HttpResponseRedirect, FileResponse
 from datetime import datetime
 from .forms.contact_form import ContactPortfolio
-import smtplib, os
-from replace_accents import replace_accents_characters
-import logging
 from django.core.mail import EmailMultiAlternatives
-from django.utils.html import strip_tags
 from django.conf import settings
-from django.template.loader import render_to_string
-# Create your views here.
-
-from dotenv import load_dotenv
 
 load_dotenv()
 def current_year():
