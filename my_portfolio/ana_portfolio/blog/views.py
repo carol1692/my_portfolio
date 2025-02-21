@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import View
 # Create your views here.
 
 
@@ -76,4 +77,10 @@ def posts_blog(request):
 def post(request, id):
     return HttpResponse(render(request, "blog/post.html",{'post':dict_blog[f"{id}"]}))
 
+class CreateProfileView(View):
+    def get(self, request):
+        return render(request, "blog/upload.html")
 
+    def post(self, request):
+        print(request.FILES["upload_input"])
+        return render(request, "blog/upload.html")

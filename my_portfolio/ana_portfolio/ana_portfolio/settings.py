@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'ana_portfolio',
     'portfolio',
     'blog',
-    'morse_translator'
+    'morse_translator',
+    'reading_diary',
 ]
 
 MIDDLEWARE = [

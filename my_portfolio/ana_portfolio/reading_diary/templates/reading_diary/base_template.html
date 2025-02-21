@@ -1,0 +1,57 @@
+{% load bootstrap5 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Diary</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'reading_diary/css/style.css' %}">
+
+    <!-- Google Books API -->
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+
+</head>
+<body class="avocadoToast_bkg">
+    <div class="container-fluid mt-4">
+        <div class="warmSand_bkg text-center p-4">
+            <img class="img-fluid" src="{% static 'reading_diary/img/logo_rasberry_smoothy.png' %}" alt="">
+        </div>
+        <img class="img-fluid warmSand_bkg" src="{% static 'reading_diary/img/rasberry_frufru.png' %}" alt="">
+        <nav class="borel-regular rasberrySmoothie_bkg">
+            <ul class="nav justify-content-center pt-2">
+                <li class="nav-item">
+                    <a class="nav-link active borel-regular" aria-current="page" href="#">Book Index</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Me </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Wishlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Notes </a>
+                </li>
+            </ul>
+                
+        </nav>
+        
+        {% block menu_calendar %} 
+        {% endblock %}
+
+        
+    </div>
+    <footer class="avocadoToast_bkg mb-3">
+        Ana Lemos - Autoral Content - 2025
+    </footer>        
+</body>
+
+</html>

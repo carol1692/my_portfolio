@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% block header %}
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 header">
+        <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">{{post.title}}</h1>
+        </div>
+    </div>
+{% endblock %}
+{% block content%}
+<div class=" align-items-md-stretch">
+    <div class="col-md">
+        <div class="p-5 text-bg-dark rounded-3 border">
+            <h2>Upload de arquivos</h2>
+            <form action="upload" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="file" class="form-control" id="upload_input" name="upload_input" aria-describedby="inputGroupFileAddon04" aria-label="Upload" >
+                    <button class="btn btn-outline-secondary" >Upload</button>
+                </div>
+               
+            </form>
+           
+        </div>
+    </div>
+</div>           
+
+{% endblock %}

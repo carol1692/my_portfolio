@@ -1,0 +1,116 @@
+:root{
+    --warmSand : #f1e3d5; 
+    --rasberrySmoothie: #e0b4db;
+    --butterScotch: #D68F54;
+    --shallowWater: #B9d0d9;
+    --peachPopsicle: #f1bca8;
+    --avocadoToast:#c9c673;
+    --apricotScrub: #f1cb7e;
+    --potteryWheel: #A15515;
+    --sereneAqua: #9bb8b9;
+    --copperBowl: #c16a5a;
+    --spicyMustard: #eeab49;
+    --dustyRose: #dea6a9;
+}
+
+/* background colors */
+.warmSand_bkg{background-color: var(--warmSand);} 
+.rasberrySmoothie_bkg{background-color: var(--rasberrySmoothie);}
+.butterScotch_bkg{background-color: var(--butterScotch)}
+.shallowWater_bkg{background-color: var(--shallowWater)}
+.peachPopsicle_bkg{background-color: var(--peachPopsicle)}
+.avocadoToast_bkg{background-color: var(--avocadoToast)}
+.apricotScrub_bkg{background-color: var(--apricotScrub)}
+.potteryWheel_bkg{background-color: var(--potteryWheel)}
+.sereneAqua_bkg{background-color: var(--sereneAqua)}
+.copperBowl_bkg{background-color: var(--copperBowl)}
+.spicyMustard_bkg{background-color: var(--spicyMustard)}
+.dustyRose_bkg{background-color: var(--dustyRose)}
+
+a {
+    
+    color: var(--warmSand) !important;;
+}
+
+.font-warmSand{
+    color: var(--warmSand);
+}
+.font-sereneAqua{
+    color: var(--sereneAqua);
+}
+
+.font-avocadoToast{
+   color: var(--avocadoToast);
+}
+
+/* google font */
+.borel-regular {
+    font-family: "Borel", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.book{
+    margin-left: 5vb;
+    width: 20vw;
+    border-radius: 3vb;
+   
+    
+}
+
+label{
+    text-decoration: underline black;
+}
+
+.frufru{
+    border: none;
+}
+
+.year{
+    font-size: 80px;
+    height: 60px;
+}
+
+li.months{
+    margin-top: 50px;
+    height: 30px;
+}
+footer{
+    color: ghostwhite;
+    background-color:#F1CB7E ;
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+nav{
+    color: ghostwhite;
+    text-align: center;
+    vertical-align: middle; 
+}
+
+/* sobreposição de img */
+.control {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+.control img {
+position: absolute;
+top: 0;
+left: 0;
+}
+.superior {
+padding: 10%;
+width: 50%;
+height: 400px;
+/* text-align: center; */
+color: #fff;
+/* margin: auto; */
+position: absolute;
+top: 0;
+/* bottom: 0; */
+left: 0;
+right: 0;
+}

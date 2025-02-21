@@ -1,0 +1,167 @@
+{% extends "reading_diary/base_template.html" %}
+{% load static %}
+{% block menu_calendar %}
+<div>
+
+</div>
+    <section class="sereneAqua_bkg frufru">
+        <!-- <img class="img-fluid" src="{% static 'reading_diary/img/frufru.png' %}" alt=""> -->
+            <nav class="nav justify-content-center borel-regular ">
+                <div class="container-fluid ">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"> <p class="year">2025 </p> </a>
+                                <ul class="dropdown-menu sereneAqua_bkg">
+                                <li><a class="dropdown-item" href="#">2024</a></li>
+                                <li><a class="dropdown-item" href="#">2023</a></li>
+                                <li><a class="dropdown-item" href="#">2022</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item months months">
+                                <a class="nav-link active" aria-current="page" href="#">Jan</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Feb</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Mar</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Apr</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">May</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Jun</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Jul</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Aug</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Sep</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Oct</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Nov</a>
+                            </li>
+                            <li class="nav-item months">
+                                <a class="nav-link" href="#">Dec</a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+            
+                
+    </section>
+    <section class="apricotScrub_bkg">
+        <img class="img-fluid frufru" src="{% static 'reading_diary/img/sereneAqua_frufru.png' %}" alt="">
+        <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">Book Index</h1>
+       <div class="mt-4 container-fluid">
+        {% for row in rows_range %}
+            <div class="row">
+                {% for col in cols_range %}
+                    <div class="col borel-regular">
+                        <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
+                        <div class="book p-4 borel-regular">
+                            <label for="" class="book-line">Title: orgulho e preconceito</label><br>
+                            <label for="">Author: Jane Austen</label><br>
+                            <label for="">Genre: Romance</label><br>
+                            <label for="">My Rating: blu blu blu</label><br>
+                            <label for="">Format: cra cra cra</label><br>
+                            <label for="">Dates Read: 09/12 - 08/03</label>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div><br>
+        {% endfor %}
+        
+       </div>
+       
+    </section>
+    <section class="rasberrySmoothie_bkg">
+        <img class="img-fluid frufru" src="{% static 'reading_diary/img/amarelo_frufru.png' %}" alt="">
+        <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">About Me</h1>
+       <div class="mt-4 container-fluid">
+        {% for row in rows_range %}
+            <div class="row">
+                {% for col in cols_range %}
+                    <div class="col borel-regular">
+                        <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
+                        <div class="warmSand_bkg book p-4 borel-regular">
+                            <label for="" class="book-line">Title: orgulho e preconceito</label><br>
+                            <label for="">Author: Jane Austen</label><br>
+                            <label for="">Genre: Romance</label><br>
+                            <label for="">My Rating: blu blu blu</label><br>
+                            <label for="">Format: cra cra cra</label><br>
+                            <label for="">Dates Read: 09/12 - 08/03</label>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+            </div><br>
+        {% endfor %}
+        
+       </div>
+       
+    </section>
+    <section>
+        <img class="img-fluid frufru" src="{% static 'reading_diary/img/rasberry.png' %}" alt="">
+        <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">Wish list</h1>
+        <div class="mt-4">
+            {% for row in rows_range %}
+                <div class="row">
+                    {% for col in cols_range %}
+                        <div class="col borel-regular">
+                            <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
+                            <div class="rasberrySmoothie_bkg book p-4 borel-regular">
+                                <label for="">Title: orgulho e preconceito</label><br>
+                                <label for="">Author: Jane Austen</label><br>
+                                <label for="">Genre: Romance</label><br>
+                                <label for="">My Rating: blu blu blu</label><br>
+                                <label for="">Format: cra cra cra</label><br>
+                                <label for="">Dates Read: 09/12 - 08/03</label>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </div><br>
+            {% endfor %}
+            
+           </div>
+    </section>
+
+    <section class="warmSand_bkg">
+        <img class="img-fluid frufru warmSand_bkg" src="{% static 'reading_diary/img/avocado.png' %}" alt="">
+        <h1 class="font-avocadoToast borel-regular text-center mt-4 pt-4">Notes</h1>
+        <div class="mt-4">
+            {% for row in rows_range %}
+                <div class="row">
+                    {% for col in cols_range %}
+                        <div class="col borel-regular">
+                            <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
+                            <div class="rasberrySmoothie_bkg book p-4 borel-regular">
+                                <label for="">Title: orgulho e preconceito</label><br>
+                                <label for="">Author: Jane Austen</label><br>
+                                <label for="">Genre: Romance</label><br>
+                                <label for="">My Rating: blu blu blu</label><br>
+                                <label for="">Format: cra cra cra</label><br>
+                                <label for="">Dates Read: 09/12 - 08/03</label>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    
+                </div><br>
+            {% endfor %}
+            
+           </div>
+           
+    </section>
+    <img class="img-fluid frufru" src="{% static 'reading_diary/img/areia.png' %}" alt="">
+{% endblock %}

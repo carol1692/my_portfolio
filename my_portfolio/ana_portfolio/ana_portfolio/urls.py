@@ -25,4 +25,5 @@ urlpatterns = [
     path('blog/', include("blog.urls"), name="blog"),
     path('portfolio/', include("portfolio.urls"), name="portfolio"),
     path('morse-translator/', include("morse_translator.urls"), name="index_morse"),
+    path('read-diary/', include("reading_diary.urls"), name="read_diary"),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
