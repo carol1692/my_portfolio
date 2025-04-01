@@ -13,12 +13,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=close" />
     <!-- css -->
     <link rel="stylesheet" href="{% static 'reading_diary/css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'reading_diary/css/buttons.css' %}">
+    <link rel="stylesheet" href="{% static 'reading_diary/css/form.css' %}">
     <!-- Google Books API -->
     <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
-
+    <!-- JS -->
+    <script src="{% static 'reading_diary/js/login.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body class="avocadoToast_bkg">
     <div class="container-fluid mt-4">
@@ -27,18 +31,21 @@
         </div>
         <img class="img-fluid warmSand_bkg" src="{% static 'reading_diary/img/rasberry_frufru.png' %}" alt="">
         <nav class="borel-regular rasberrySmoothie_bkg">
-            <ul class="nav justify-content-center pt-2">
+            <ul class="nav justify-content-center p-3 font-warmSand">
                 <li class="nav-item">
-                    <a class="nav-link active borel-regular" aria-current="page" href="#">Book Index</a>
+                    <a class="nav-link active borel-regular" aria-current="page" href="#books_div">Book Index</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Me </a>
+                    <a class="nav-link" href="#aboutMe_div">About Me </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Wishlist</a>
+                    <a class="nav-link" href="#wishList_div">Wishlist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Notes </a>
+                    <a class="nav-link" href="#wishList_div"> Notes </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-login" onclick="loginModal()" > Login </a>
                 </li>
             </ul>
                 
@@ -51,7 +58,61 @@
     </div>
     <footer class="avocadoToast_bkg mb-3">
         Ana Lemos - Autoral Content - 2025
-    </footer>        
+    </footer>    
+    
+    
+     <!-- MODAL -->
+     <div class="modal fade" id="modal_login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_instructionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content avocadoToast_bkg">
+            <div class="modal-header">
+            <h5 class="modal-title borel-regular font-potteryWheel mt-4" id="modal_instructionLabel">Create account</h5>
+            <button type="button" class="material-symbols-outlined m-2 close-btn" data-bs-dismiss="modal" aria-label="Close">close</button>
+            </div>
+            <div class="modal-body">
+                <form class="m-4 ps-3" id="register_form" action="" method="post">
+                    {% csrf_token %}
+                    {% if register_error %}
+                        {{ register_error.errors }}
+                        <p class="borel-regular text-label"> {{register_error.errors}} </p>
+                    {% endif %}
+                    <label for="user_name" class="borel-regular text-label"> {{register_user.user_name.label}} </label>
+                    <div name="user_name" class="mb-3"> {{register_user.user_name}} </div>
+                    <label for="user_email" class="borel-regular text-label">{{register_user.user_email.label}}</label>
+                    <div name="user_email" class="mb-3"> {{register_user.user_email}} </div>    
+                    <label for="user_passwd" class="borel-regular text-label">{{register_user.user_password.label}}</label>
+                    <div name="user_passwd" class="mb-3"> {{register_user.user_password}} </div>   
+                    <label for="user_rpt_passwd" class="borel-regular text-label">{{register_user.repeat_password.label}}</label>
+                    <div name="user_rpt_passwd" class="mb-3">{{register_user.repeat_password}} </div>   
+                    <input type="submit" class="button_search" value="Sign In" formaction="register_user">
+                </form>
+            
+            </div>
+            <!-- <div class="modal-footer ">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div> -->
+        </div>
+        </div>
+    </div>
+<!-- END MODAL -->
+<!-- MODAL ERRO  -->
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hide this modal and show the first with the button below.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END ERRO MODAL -->
 </body>
 
 </html>

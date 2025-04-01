@@ -7,12 +7,12 @@
     <section class="sereneAqua_bkg frufru">
         <!-- <img class="img-fluid" src="{% static 'reading_diary/img/frufru.png' %}" alt=""> -->
             <nav class="nav justify-content-center borel-regular ">
-                <div class="container-fluid ">
+                <div class="container-fluid">
                         <ul class="nav justify-content-center">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"> <p class="year">2025 </p> </a>
-                                <ul class="dropdown-menu sereneAqua_bkg">
-                                <li><a class="dropdown-item" href="#">2024</a></li>
+                            <li class="nav-item dropdown font-warmSand">
+                                <a class="nav-link dropdown-toggle font-warmSand" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"> <p class="year">2025 </p> </a>
+                                <ul class="dropdown-menu sereneAqua_bkg font-warmSand">
+                                <li ><a class="dropdown-item font-warmSand" href="#">2024</a></li>
                                 <li><a class="dropdown-item" href="#">2023</a></li>
                                 <li><a class="dropdown-item" href="#">2022</a></li>
                                 </ul>
@@ -56,62 +56,56 @@
                         </ul>
                 </div>
             </nav>
-            
-                
     </section>
-    <section class="apricotScrub_bkg">
+
+    <section id="books_div" class="apricotScrub_bkg">
         <img class="img-fluid frufru" src="{% static 'reading_diary/img/sereneAqua_frufru.png' %}" alt="">
+        <form method="post" action="" class="text-center mt-4 pt-4">
+            {% csrf_token %}
+            {{form.search_book}}
+            <!-- <input type="text" name="q" value="{{ query }}" placeholder="Buscar livros"> -->
+            <input type="submit" name="q" value="Search Book" class="button_search">
+        </form>
         <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">Book Index</h1>
-       <div class="mt-4 container-fluid">
-        {% for row in rows_range %}
-            <div class="row">
-                {% for col in cols_range %}
-                    <div class="col borel-regular">
-                        <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
-                        <div class="book p-4 borel-regular">
-                            <label for="" class="book-line">Title: orgulho e preconceito</label><br>
-                            <label for="">Author: Jane Austen</label><br>
-                            <label for="">Genre: Romance</label><br>
-                            <label for="">My Rating: blu blu blu</label><br>
-                            <label for="">Format: cra cra cra</label><br>
-                            <label for="">Dates Read: 09/12 - 08/03</label>
-                        </div>
-                    </div>
-                {% endfor %}
+        <div class="mt-4 container-fluid">
+            {% if livros %} 
                 
-            </div><br>
-        {% endfor %}
-        
+                <div class="row">
+                    {% for livro in livros %}
+                        <div class="col-1">
+                            <div class="col borel-regular p-4"> 
+                                <img src="{{livro.thumbnail.thumbnail}}" alt="">
+                            </div>
+                            <!-- <div class="col borel-regular">
+                                <strong>{{ livro.titulo }}</strong><br>
+                                Autor(es): {{ livro.autor }}<br>
+                                Descrição: {{ livro.descricao }}<br>
+                                <a href="{{ livro.link }}" target="_blank">Ver mais</a>
+                            </div> -->
+                        </div>
+                            
+                    {% endfor %}
+                </div>
+                <br>
+            {% else %}
+            <div class="row">
+                <p>Nenhum livro encontrado.</p>
+            </div>
+            {% endif %}
        </div>
-       
     </section>
-    <section class="rasberrySmoothie_bkg">
+
+    <section id="aboutMe_div" class="rasberrySmoothie_bkg">
         <img class="img-fluid frufru" src="{% static 'reading_diary/img/amarelo_frufru.png' %}" alt="">
         <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">About Me</h1>
-       <div class="mt-4 container-fluid">
-        {% for row in rows_range %}
+       	<div class="mt-4 container-fluid">
             <div class="row">
-                {% for col in cols_range %}
-                    <div class="col borel-regular">
-                        <!-- <img class="img-fluid frufru book" src="{% static 'reading_diary/img/border2.png' %}" alt=""> -->
-                        <div class="warmSand_bkg book p-4 borel-regular">
-                            <label for="" class="book-line">Title: orgulho e preconceito</label><br>
-                            <label for="">Author: Jane Austen</label><br>
-                            <label for="">Genre: Romance</label><br>
-                            <label for="">My Rating: blu blu blu</label><br>
-                            <label for="">Format: cra cra cra</label><br>
-                            <label for="">Dates Read: 09/12 - 08/03</label>
-                        </div>
-                    </div>
-                {% endfor %}
-                
-            </div><br>
-        {% endfor %}
-        
+
+            </div>
        </div>
        
     </section>
-    <section>
+    <section id="wishList_div">
         <img class="img-fluid frufru" src="{% static 'reading_diary/img/rasberry.png' %}" alt="">
         <h1 class="font-warmSand borel-regular text-center mt-4 pt-4">Wish list</h1>
         <div class="mt-4">
@@ -137,10 +131,13 @@
            </div>
     </section>
 
-    <section class="warmSand_bkg">
+    <section id="notes_div" class="warmSand_bkg">
         <img class="img-fluid frufru warmSand_bkg" src="{% static 'reading_diary/img/avocado.png' %}" alt="">
         <h1 class="font-avocadoToast borel-regular text-center mt-4 pt-4">Notes</h1>
         <div class="mt-4">
+            <div class="row">
+
+            </div>
             {% for row in rows_range %}
                 <div class="row">
                     {% for col in cols_range %}
@@ -163,5 +160,8 @@
            </div>
            
     </section>
-    <img class="img-fluid frufru" src="{% static 'reading_diary/img/areia.png' %}" alt="">
+
+  
+        <img class="img-fluid frufru" src="{% static 'reading_diary/img/areia.png' %}" alt="">
+     
 {% endblock %}

@@ -1,0 +1,56 @@
+@import "style.css"; 
+
+.button_search{
+    padding: 10px;
+    color: var(--spicyMustard);
+    background-color: var(--copperBowl);
+    border-radius: 10px;
+    border: none;
+    text-decoration: none; 
+   
+}
+
+.button_search:hover {
+    background-color: var(--potteryWheel);
+    color: var(--spicyMustard);
+    border-color: var(--copperBowl);
+    text-decoration: none; 
+}
+
+.button_search:active {
+    background-color: var(--copperBowl);
+    transform: translateY(4px);
+}
+
+.btn-login{
+    color: var(--warmSand);
+    border-style: dotted;
+    border-radius: 15px;
+    padding-bottom: 1px;
+}
+
+.btn-login:hover {
+    background-color: var(--warmSand);
+    color: var(--rasberrySmoothie);
+}
+
+.btn-login:active {
+    transform: translateY(4px);
+}
+
+.close-btn{
+    color: var(--potteryWheel);
+    background-color: transparent;
+    border: none;
+    opacity: 80%;
+}
+
+.close-btn:hover{
+    opacity: 100%;
+}
+
+.close-btn:active{
+    border: solid;
+    border-radius: 10px;
+    opacity: 50%;
+}

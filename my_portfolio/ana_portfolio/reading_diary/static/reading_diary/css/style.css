@@ -27,21 +27,19 @@
 .spicyMustard_bkg{background-color: var(--spicyMustard)}
 .dustyRose_bkg{background-color: var(--dustyRose)}
 
-a {
-    
-    color: var(--warmSand) !important;;
-}
-
-.font-warmSand{
-    color: var(--warmSand);
-}
-.font-sereneAqua{
-    color: var(--sereneAqua);
-}
-
-.font-avocadoToast{
-   color: var(--avocadoToast);
-}
+/* font color */
+.font-warmSand{color: var(--warmSand);} 
+.font-rasberrySmoothie{color: var(--rasberrySmoothie);}
+.font-butterScotch{color: var(--butterScotch)}
+.font-shallowWater{color: var(--shallowWater)}
+.font-peachPopsicle{color: var(--peachPopsicle)}
+.font-avocadoToast{color: var(--avocadoToast)}
+.font-apricotScrub{color: var(--apricotScrub)}
+.font-potteryWheel{color: var(--potteryWheel)}
+.font-sereneAqua{color: var(--sereneAqua)}
+.font-copperBowl{color: var(--copperBowl)}
+.font-spicyMustard{color: var(--spicyMustard)}
+.font-dustyRose{color: var(--dustyRose)}
 
 /* google font */
 .borel-regular {
@@ -54,8 +52,6 @@ a {
     margin-left: 5vb;
     width: 20vw;
     border-radius: 3vb;
-   
-    
 }
 
 label{
@@ -84,9 +80,21 @@ footer{
 }
 
 nav{
-    color: ghostwhite;
+    color: var(--warmSand); 
     text-align: center;
     vertical-align: middle; 
+}
+
+.nav-link{
+    color: var(--warmSand); 
+}
+.nav-link:hover{
+    color: var(--copperBowl);
+    transform: translateY(4px);
+}
+
+.nav-link:active{
+    transform: translateY(4px);
 }
 
 /* sobreposição de img */
@@ -114,3 +122,4 @@ top: 0;
 left: 0;
 right: 0;
 }
+
