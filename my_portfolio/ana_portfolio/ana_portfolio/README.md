@@ -1,11 +1,11 @@
-What to do next:
-Read - diary(On Pause):
-   Login
-   -- create modal or error message to fields
-   -- create validation to secure same password 
-   -- create db and tables to record users data
-   -- create user session
-   -- create redirect view properly to login
+What to do next:  
+Read - diary(On Pause):  
+   Login  
+   -- create modal or error message to fields  
+   -- create validation to secure same password  
+   -- create db and tables to record users data  
+   -- create user session  
+   -- create redirect view properly to login  
 
 
 
