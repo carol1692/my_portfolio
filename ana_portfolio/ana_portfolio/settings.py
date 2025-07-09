@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'blog',
     'morse_translator',
     'reading_diary',
+    'colab_playlist_api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
