@@ -1,6 +1,6 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 urlpatterns = [
-   path('', views.main , name="index_collab_songs")
+   path('', views.RoomView.as_view() , name="index_collab_songs")
 ] 
