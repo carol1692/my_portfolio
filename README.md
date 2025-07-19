@@ -1,5 +1,5 @@
 # What to do next:  
-Jé's Assistant:
+## Jé's Assistant:
 -- Improve Front-end, We need pretty things in life
 -- The way as Artist and Album Views are working using render is not the better Django way, let's analyze if we rewrite all the views or if redirect can help us
 -- Ask Jé what should be the perfect interaction to use on daily basis
