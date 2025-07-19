@@ -1,0 +1,30 @@
+{% extends "je_assistant/base_je_assistant.html" %}
+{% load static %}
+{% block content %}
+             <div class="p-3">
+                {% if list_albums%}
+                    <hr>
+                        <h2 class="p-3">Artist's Albums:</h2>
+                        <div class="main-grid">
+                            {% for album in list_albums %} 
+                                <div class="cards">
+                                    <a href="{% url 'album_info' album.album_id  %}">   
+                                        <div class="card-grid ">
+                                            <div class="p-3">
+                                                <img src="{{album.album_image}}" class="logo-responsive thumb-size img-thumbnail" alt="">
+                                            </div>
+                                            <div class="text-cards p-2"> 
+                                                <label for="artist_name">Artista:</label>
+                                                <p name="artist_name">{{album.artist_name}} </p>
+                                                <label for="artist_id">Album:</label>
+                                                <p name="artist_id">{{ album.album_name}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                {% endif %}
+            </div>
+{% endblock %}
+ 

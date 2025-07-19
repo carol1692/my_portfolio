@@ -26,5 +26,6 @@ urlpatterns = [
     path('portfolio/', include("portfolio.urls"), name="portfolio"),
     path('morse-translator/', include("morse_translator.urls"), name="index_morse"),
     path('read-diary/', include("reading_diary.urls"), name="read_diary"),
-    path('collab-songs/', include("colab_playlist_api.urls"), name="collab-songs")
+    path('jessicas/', include("je_assistant.urls"), name="index_je_assistant"),
+
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
