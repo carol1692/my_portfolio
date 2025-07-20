@@ -31,6 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#SPOTIFY CREDENTIALS
+SPOTIFY_CLIENT_ID = os.getenv("CLIENT_ID")
+SPOTIFY_CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+SPOTIFY_REDIRECT_URI = os.getenv("SPOTIFY_URI")
 
 # Application definition
 
@@ -42,11 +46,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
+    
     'ana_portfolio',
     'portfolio',
-    'blog',
     'morse_translator',
+    # decidir se proximas linhas devem ser apagadas e apps removidos
+    'blog',
     'reading_diary',
+    'je_assistant',
 ]
 
 MIDDLEWARE = [
@@ -149,4 +156,6 @@ EMAIL_TIMEOUT = 30
 
 #API KEYS
 GOOGLE_BOOKS_API_KEY = os.getenv("GOOGLE_API_BOOK_KEY")
+
+
 

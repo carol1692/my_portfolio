@@ -1,0 +1,43 @@
+{% load bootstrap5 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jé's Assistant</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <!-- css -->
+     <link rel="stylesheet" href="{% static 'je_assistant/css/base.css' %}">
+</head>
+<body>
+    <div class="container-fluid edu-vic-wa-nt-beginner-googlefonts">
+        <div class="container-sm base-content">
+            <div class="text-center ">
+                 <a href="{% url 'index_je' %}">    <img class="logo-responsive" src="{% static 'je_assistant/logo_with_dog.png'%}" alt="" ></a>
+            </div>
+            <div class="container text-center mt-4 pt-4">
+                <div class="row justify-content-md-center">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                             {{form.search.label}}
+                        </div>
+                        <div class="mb-3">
+                             {{ form.search}}
+                        </div>
+                         <button type="submit" class="btn button-submit m-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+            {% block content%} {% endblock %}
+        </div>
+        <hr/>
+            <footer class="text-center" id="footer" >{{ year }} 2025, Ana Lemos - Autoral Content </footer>
+    </div>
+</body>
+</html>

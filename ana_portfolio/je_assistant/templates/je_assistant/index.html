@@ -1,0 +1,62 @@
+{% extends "je_assistant/base_je_assistant.html" %}
+{% load static %}
+{% block content %}
+            <div class="p-3">
+                {% if list_artists_tracks%}
+                    <hr>
+                    {% if list_artists_tracks.artists %}
+                        <h2 class="p-3">Artists:</h2>
+                        <div class="main-grid">
+                            {% for artist in list_artists_tracks.artists %} 
+                                <div class="cards">
+                                    <a href="{% url 'artist_albums' artist.artist_id  %}">   
+                                        <div class="card-grid ">
+                                            <div class="p-3">
+                                                <img src="{{artist.artist_image}}" class="logo-responsive thumb-size img-thumbnail" alt="">
+                                            </div>
+                                            <div class="text-cards p-2"> 
+                                                <label for="artist_name">Artista:</label>
+                                                <p name="artist_name">{{artist.artist_name}} </p>
+                                                <label for="artist_id">Artist ID::</label>
+                                                <p name="artist_id">{{artist.artist_id}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if list_artists_tracks.tracks %}
+                        <h2 class="p-3">Tracks:</h2>
+                        <div class="main-grid">
+                            {% for track in list_artists_tracks.tracks %} 
+                                <div class="cards">
+                                    <a href="{% url 'album_info' track.track_album_id %}">   
+                                        
+                                        <div class="card-grid ">
+                                            <div class="p-3">
+                                                <img src="{{track.track_image}}" class="logo-responsive thumb-size img-thumbnail" alt="">
+                                            </div>
+                                            <div class="text-cards p-2"> 
+                                                <label for="artist_name">Track:</label>
+                                                <p name="artist_name">{{track.track_name}} </p>
+                                                <label for="artist_id">Track ID::</label>
+                                                <p name="artist_id">{{track.track_id}}</p>
+                                                <label for="track_artist">Artist:</label>
+                                                <p name="track_artist">{{track.track_artist}}</p>
+                                                <label for="track_album">Album:</label>
+                                                <p name="track_album">{{track.track_album}}</p>
+                                                <label for="track_album_id">Album ID:</label>
+                                                <p name="track_album_id">{{track.track_album_id}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+           
+{% endblock %}
+ 
