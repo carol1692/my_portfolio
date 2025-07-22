@@ -31,7 +31,7 @@ def download(request, cv):
     if cv == 'download_pt':
         response = FileResponse(open( path_cv + 'cv- Ana Lemos - pt-br.pdf', "rb"),as_attachment=True)
     else:
-        response = FileResponse(open( path_cv + 'cv- Ana Lemos - en.pdf', "rb"),as_attachment=True)
+        response = FileResponse(open( path_cv + 'cv- Ana Lemos - dev-en.pdf', "rb"),as_attachment=True)
     return response
 
 def contact(request, data=current_year):
