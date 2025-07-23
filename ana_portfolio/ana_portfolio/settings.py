@@ -147,7 +147,6 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv("E_MAIL")
 EMAIL_HOST_PASSWORD = os.getenv("E_MAIL_PASSWD")
-EMAIL_USE_SSL = False  # Set to True if using SSL
 DEFAULT_FROM_EMAIL = os.getenv("E_MAIL") # Default sender email address
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
