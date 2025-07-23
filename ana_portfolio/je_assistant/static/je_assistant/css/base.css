@@ -11,6 +11,7 @@ body{
 .container-sm{
     margin-top: 5%;
 }
+
 .base-content{
     background-color: #ffffff;
     /* background-color: #A970B1; */
@@ -48,44 +49,34 @@ body{
 }
 
 .thumb-size{
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 hr{
     background-color: #485696;
 }
 
-#footer{
-    /* color: #5869b6; */
+footer{
     font-size: 16px;
     color: #ced4da;
 }
 
-.main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.cards{
-    border-radius: 10px;
-    border-color: #ced4da;
-    border-style:solid;
-}
-
-.cards a{
+.cards-link a{
     color: #2D2A2D;
     text-decoration: none;
 }
 
-.card-grid{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+.text-cards{
     font-size: medium;
 }
 
-.giga-card{
-    width:70vw;
+.title{
+    font-weight: bolder;
+    font-size: large;
 }
 
+.text-body{
+    font-weight: 400;
+    font-size: medium;
+}

@@ -1,28 +1,32 @@
 {% extends "je_assistant/base_je_assistant.html" %}
 {% load static %}
 {% block content %}
-             <div class="p-3">
-                {% if album_info %}
-                    <hr>
-                        <h2 class="p-3">{{ album_info.album_name}}</h2>
-                        <div class="main-grid">
-                                <div class="cards">
-                                        <div class="card-grid ">
-                                            <div class="p-3">
-                                                <img src="{{album_info.album_image}}" class="logo-responsive thumb-size img-thumbnail" alt="">
-                                            </div>
-                                            <div class="text-cards p-2"> 
-                                                <label for="artist_name">Artista:</label>
-                                                <p name="artist_name">{{album_info.artist_name}} </p>
-                                                <label for="album_id">Album:</label>
-                                                <p name="album_id">{{ album_info.album_name}}</p>
-                                                <label for="album_upc">UPC:</label>
-                                                <p name="album_upc">{{ album_info.album_upc}}</p>
-                                            </div>
-                                        </div>
-                                </div>
+    {% if album_info %}
+    <div class="container my-4 pb-4">
+        <hr>
+        <h2 class="p-3">{{ album_info.album_name}}</h2>
+        <div class="row ">
+            <div class="card h-100">
+                <div class="card-body cards-link">
+                    <div class="row">
+                        <div class="p-3 col-12 col-md-6">
+                            <img src="{{album_info.album_image}}" class="img-thumbnail" alt="">
                         </div>
-                {% endif %}
+                        <div class="text-body p-2 col-12 col-md-6"> 
+                            <label class="title">Artista:</label>
+                            <p name="artist_name">{{album_info.artist_name}} </p>
+                            <label class="title">Album:</label>
+                            <p name="album_id">{{ album_info.album_name}}</p>
+                            <label class="title">UPC:</label>
+                            <p name="album_upc">{{ album_info.album_upc}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
+        </div>
+    </div>
+    
+    {% endif %}
 {% endblock %}
  
