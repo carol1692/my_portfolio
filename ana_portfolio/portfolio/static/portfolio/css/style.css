@@ -137,6 +137,7 @@ a {
 .card{
     border-color: var(--hot-brown);
 }
+
 .contact-form{
     width: 50rem;
 }
@@ -144,3 +145,4 @@ a {
 .adjust-height{
     height: 35vh;
 }
+
