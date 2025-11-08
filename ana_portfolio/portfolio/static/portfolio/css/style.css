@@ -9,20 +9,26 @@
 
     /* font-color-pallete */
     --red-brown: #6B240C;
-    --hot-brown: #994D1C;
+    --red-brown-shadow: #6B240C78;
+    --hot-brown: #974d1c;
     --light-orange: #E48F45;
     --beige:#F5CCA0;
 }
 
+/* configs globais */
 hr{
     color: var(--hot-brown);
 }
 
-.color-hot-brown{
-    color: #994D1C;
+li{
+    margin-left: 15px;
 }
 
+a {
+    text-decoration: none;
+}
 
+/* botao menu */
 .button{
     padding: 5px;
     color: var(--hot-brown);
@@ -33,7 +39,7 @@ hr{
     color: var(--red-brown);
 }
 
-
+/* botao download */
 .button_download{
     padding: 10px;
     color: var(--champagne-pink);
@@ -41,7 +47,6 @@ hr{
     border-radius: 10px;
     border: none;
     text-decoration: none; 
-   
 }
 
 .button_download:hover {
@@ -56,6 +61,7 @@ hr{
     transform: translateY(4px);
 }
 
+/* icones contatos */
 .svg-icon{
     width: 80px;
     height: 80px;
@@ -68,14 +74,24 @@ hr{
     fill:var(--hot-brown); /* Cor do ícone */
 }
 
+/* classes de cores */
+.color-hot-brown{
+    color: #994D1C;
+}
+
 .body-font{
     color: var(--red-brown);
 }
 
-.ft-body-size{
-    font-size: 25px;
+.bkg-card{
+    background-color: var(--apricot);
 }
 
+.card{
+    border-color: var(--hot-brown);
+}
+
+/* animação */
 .gif-intro{
     max-width: 40vw;
     max-height: 40vh;
@@ -83,20 +99,12 @@ hr{
     border-radius: 50%;
 }
 
-.progress-container{
-    width: 40vw;
+/* alinhamentos */
+.center{
+    padding-left: 25%;
 }
 
-li{
-    margin-left: 15px;
-}
-
-.bg-white{
-    background-color: white;
-    width: 100%;
-    /* border-radius: 30px; */
-}
-
+/* form */
 .form-switch .form-check-input {
   color: var(--hot-brown);
 }
@@ -114,10 +122,11 @@ li{
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
 }
 
-.center{
-    padding-left: 25%;
+.contact-form{
+    width: 50rem;
 }
 
+/* imagens */
 .img-thumbs{
     border-radius: 3vb;
 }
@@ -126,23 +135,5 @@ li{
     border-color: var(--hot-brown);
 }
 
-.bkg-card{
-    background-color: var(--apricot);
-}
 
-a {
-    text-decoration: none;
-}
-
-.card{
-    border-color: var(--hot-brown);
-}
-
-.contact-form{
-    width: 50rem;
-}
-
-.adjust-height{
-    min-height: 35vh;
-}
 
