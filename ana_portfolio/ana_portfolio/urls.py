@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include("blog.urls"), name="blog"),
-    path('portfolio/', include("portfolio.urls"), name="portfolio"),
+    path('', include("portfolio.urls"), name="portfolio"),
     path('morse-translator/', include("morse_translator.urls"), name="index_morse"),
     path('read-diary/', include("reading_diary.urls"), name="read_diary"),
     path('jessicas/', include("je_assistant.urls"), name="index_je_assistant"),
