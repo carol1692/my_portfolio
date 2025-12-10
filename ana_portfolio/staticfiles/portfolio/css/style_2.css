@@ -1,0 +1,96 @@
+.borel-regular {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* tamanho de fonte */
+.ft-body-size{
+    font-size: 25px;
+}
+
+/* containers  */
+.container-sm{
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: var(--ice-white);
+}
+
+.content{
+    padding-left: 2vw;
+    align-content: center;
+}
+
+.cv-body{
+    padding: 2vw;
+    background-color: white;
+    border-radius: 30px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.progress-container{
+    width: 40vw;
+}
+
+.bg-white{
+    background-color: white;
+    width: 100%;
+    /* border-radius: 30px; */
+}
+
+.adjust-height{
+    min-height: 35vh;
+}
+
+
+.accordion-button:focus {
+  border-color: var(--red-brown); 
+  box-shadow: 0 0 0 0.25rem var(--red-brown-shadow); 
+}
+
+/* Quando o accordion estiver aberto */
+.accordion-button:not(.collapsed) {
+  border-color: var(--red-brown);
+  background-color: #e8f5e9;
+}
+
+
+.accordion-button:not(.collapsed){
+    color: var(--hot-brown);
+    background-color:var(--beige);
+}
+
+/* Setinha padrão (quando o accordion está fechado) */
+.accordion-button::after {
+  filter:
+  invert(33%)
+  sepia(59%) 
+  saturate(911%) 
+  hue-rotate(354deg) 
+  brightness(89%) 
+  contrast(88%);
+}
+
+
+/* Quando o accordion está aberto */
+.accordion-button:not(.collapsed)::after {
+    filter:
+    invert(33%)
+    sepia(59%) 
+    saturate(911%) 
+    hue-rotate(354deg) 
+    brightness(89%) 
+    contrast(88%);
+}
