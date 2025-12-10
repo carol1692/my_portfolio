@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SECRET_KEY_DJANGO")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 #SPOTIFY CREDENTIALS
 SPOTIFY_CLIENT_ID = os.getenv("CLIENT_ID")
