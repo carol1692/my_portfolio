@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "ana_portfolio/ana_portfolio/wsgi.py",
+      "src": "my_portfolio/ana_portfolio/ana_portfolio/wsgi.py",
       "use": "@vercel/python"
     }
   ],
@@ -13,7 +13,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "ana_portfolio/ana_portfolio/wsgi.py"
+      "dest": "my_portfolio/ana_portfolio/ana_portfolio/wsgi.py"
     }
   ]
 }
