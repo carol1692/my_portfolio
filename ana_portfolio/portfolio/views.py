@@ -47,7 +47,7 @@ def contact(request, data=current_year):
             send_email = EmailMultiAlternatives(subject=f'Contact from {user_name} via my portfolio', body=text_content, from_email=settings.EMAIL_HOST_USER, to=["carol1692@hotmail.com"])
             send_email.attach_alternative(html_content, 'text/html')
             send_email.send()
-            return HttpResponseRedirect("/portfolio/thanks_msg")
+            return HttpResponseRedirect("/thanks_msg")
     else:
         formulario = ContactPortfolio()
     

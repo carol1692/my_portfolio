@@ -218,8 +218,7 @@ my_portfolio
 │  │  ├─ urls.py
 │  │  ├─ views.py
 │  │  └─ __init__.py
-│  ├─ requirements.txt
-│  └─ vercel.json
+│  └─ requirements.txt
 └─ README.md
 
 ```
